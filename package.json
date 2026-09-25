@@ -1,0 +1,25 @@
+{
+  "name": "global-acsic-conference-2026",
+  "version": "1.0.0",
+  "description": "Official website for Global Symposium & 38th ACSIC Conference 2026",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "build": "echo 'No build process needed - static website'",
+    "deploy": "git push origin main"
+  },
+  "keywords": [
+    "conference",
+    "acsic",
+    "symposium",
+    "global",
+    "mumbai",
+    "2026"
+  ],
+  "author": "ACSIC Conference Organizing Committee",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/global-acsic-website-2026.git"
+  }
+}
