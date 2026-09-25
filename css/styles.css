@@ -86,16 +86,18 @@ a {
 }
 
 .btn-login {
-    color: var(--primary-dark);
+    background-color: var(--accent-yellow);
+    color: var(--text-dark);
     font-weight: 600;
-    padding: 10px 20px;
-    border: 2px solid var(--primary-dark);
-    border-radius: 5px;
+    padding: 12px 28px;
+    border: 2px solid var(--accent-yellow);
+    border-radius: 50px;
 }
 
 .btn-login:hover {
-    background-color: var(--primary-dark);
-    color: var(--text-light);
+    background-color: #f59e0b;
+    border-color: #f59e0b;
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
 }
 
 .btn-large {
@@ -248,13 +250,14 @@ a {
 .hero {
     position: relative;
     color: var(--text-light);
-    padding: 80px 20px;
+    padding: 60px 20px 80px 20px;
     text-align: center;
     overflow: hidden;
-    min-height: 700px;
+    min-height: 900px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d3d 50%, #1a1a1a 100%);
 }
 
 .hero-background {
@@ -264,12 +267,11 @@ a {
     right: 0;
     bottom: 0;
     z-index: 1;
-}
-
-.hero-bg-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    background-image:
+        radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(30, 58, 138, 0.15) 0%, transparent 50%),
+        repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, 0.03) 35px, rgba(255, 255, 255, 0.03) 70px);
+    pointer-events: none;
 }
 
 .hero-overlay {
@@ -278,50 +280,118 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 51, 102, 0.8) 0%, rgba(30, 58, 138, 0.8) 100%);
+    background: linear-gradient(180deg, rgba(20, 20, 40, 0.6) 0%, rgba(20, 20, 40, 0.5) 50%, rgba(20, 20, 40, 0.7) 100%);
     z-index: 2;
+}
+
+.hero-main {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+}
+
+.hero-logos-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.hero-logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.hero-logo.main-logo {
+    height: 80px;
+}
+
+.hero-badges {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.hero-badge {
+    display: inline-block;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.08);
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--text-light);
 }
 
 .hero-content {
     position: relative;
     z-index: 3;
-    max-width: 900px;
-    margin: 0 auto;
+    width: 100%;
 }
 
-.hero-title {
-    font-size: 54px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    line-height: 1.2;
-}
-
-.hero-meta {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-    font-size: 14px;
-}
-
-.meta-badge {
-    display: inline-block;
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.1);
-    padding: 10px 20px;
-    border-radius: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.hero-subtitle {
-    font-size: 20px;
+.hero-subtitle-main {
+    font-size: 18px;
     font-weight: 500;
-    margin: 20px 0;
-    line-height: 1.6;
+    color: var(--text-light);
+    margin-bottom: 20px;
     opacity: 0.95;
+    letter-spacing: 0.5px;
+}
+
+.hero-title-main {
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    line-height: 1.15;
+    text-transform: uppercase;
+}
+
+.hero-title-main sup {
+    font-size: 0.5em;
+    position: relative;
+    top: -10px;
+}
+
+.gold-text {
+    display: block;
+    color: var(--accent-yellow);
+    font-weight: 800;
+    font-size: 64px;
+}
+
+.white-text {
+    display: block;
+    color: var(--text-light);
+    font-weight: 800;
+    font-size: 64px;
+}
+
+.hero-tagline {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 20px 0;
+    color: var(--text-light);
+    letter-spacing: 0.5px;
+}
+
+.hero-description-main {
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.92);
+    margin: 25px 0 40px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-buttons {
@@ -329,46 +399,7 @@ a {
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 40px;
-}
-
-/* Countdown Timer */
-.countdown-section {
-    position: relative;
-    z-index: 3;
-}
-
-.countdown-timer {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 50px;
-    flex-wrap: wrap;
-    padding-top: 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.timer-box {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px 25px;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    min-width: 100px;
-}
-
-.timer-value {
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--accent-yellow);
-}
-
-.timer-label {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 8px;
+    margin-top: 30px;
 }
 
 /* ========================================
