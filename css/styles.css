@@ -294,7 +294,7 @@ a {
     max-width: 1000px;
 }
 
-.hero-logos-section {
+.hero-top-logos {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -303,17 +303,17 @@ a {
     flex-wrap: wrap;
 }
 
-.hero-logo {
+.logo-item {
     height: 60px;
     width: auto;
     object-fit: contain;
 }
 
-.hero-logo.main-logo {
+.logo-item.main-logo {
     height: 80px;
 }
 
-.hero-badges {
+.hero-event-badges {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -322,7 +322,7 @@ a {
     font-size: 14px;
 }
 
-.hero-badge {
+.event-badge-item {
     display: inline-block;
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.08);
@@ -332,13 +332,13 @@ a {
     color: var(--text-light);
 }
 
-.hero-content {
+.hero-main-content {
     position: relative;
     z-index: 3;
     width: 100%;
 }
 
-.hero-subtitle-main {
+.hero-org-name {
     font-size: 18px;
     font-weight: 500;
     color: var(--text-light);
@@ -347,7 +347,7 @@ a {
     letter-spacing: 0.5px;
 }
 
-.hero-title-main {
+.hero-main-title {
     font-size: 64px;
     font-weight: 800;
     letter-spacing: 2px;
@@ -356,27 +356,27 @@ a {
     text-transform: uppercase;
 }
 
-.hero-title-main sup {
+.hero-main-title sup {
     font-size: 0.5em;
     position: relative;
     top: -10px;
 }
 
-.gold-text {
+.gold-heading {
     display: block;
     color: var(--accent-yellow);
     font-weight: 800;
     font-size: 64px;
 }
 
-.white-text {
+.white-heading {
     display: block;
     color: var(--text-light);
     font-weight: 800;
     font-size: 64px;
 }
 
-.hero-tagline {
+.hero-main-tagline {
     font-size: 28px;
     font-weight: 600;
     margin: 20px 0;
@@ -384,7 +384,7 @@ a {
     letter-spacing: 0.5px;
 }
 
-.hero-description-main {
+.hero-main-description {
     font-size: 16px;
     line-height: 1.8;
     color: rgba(255, 255, 255, 0.92);
@@ -394,7 +394,7 @@ a {
     margin-right: auto;
 }
 
-.hero-buttons {
+.hero-action-buttons {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -881,11 +881,11 @@ a {
         transform: rotate(-45deg) translate(7px, -7px);
     }
 
-    .hero-title {
+    .hero-main-title {
         font-size: 36px;
     }
 
-    .hero-subtitle {
+    .hero-org-name {
         font-size: 16px;
     }
 
@@ -893,11 +893,11 @@ a {
         font-size: 28px;
     }
 
-    .hero-buttons {
+    .hero-action-buttons {
         flex-direction: column;
     }
 
-    .hero-buttons .btn {
+    .hero-action-buttons .btn {
         width: 100%;
     }
 
@@ -926,11 +926,11 @@ a {
 }
 
 @media (max-width: 480px) {
-    .hero-title {
+    .hero-main-title {
         font-size: 28px;
     }
 
-    .hero-subtitle {
+    .hero-org-name {
         font-size: 14px;
     }
 
